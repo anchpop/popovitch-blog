@@ -1,6 +1,7 @@
 ---
 title: Why Do We Need Another Programming Language 
 date: "2019-03-28T23:46:37.121Z"
+description: Modern languages lack many desirable features, Zoda is an attempt to change that somewhat.
 ---
 
 The languages that we have available to us for writing games today are inadequate. I won't attempt to prove that here - I don't expect to change the mind of anyone who doesn't already agree with me. You want a few things in any language for writing games:
@@ -39,3 +40,4 @@ People tend to use more libraries and 3rd party code in Javascript than Haskell.
 
 5) Have very aggressive DCE, to keep binaries small if you only use a small part of a big library.
 
+Obviously this is all hypothetical because Zoda is in very conceptual stages right now. I do not know if any of these features will even be possible or useful. But I'm excited to try, either way I'll learn a lot.

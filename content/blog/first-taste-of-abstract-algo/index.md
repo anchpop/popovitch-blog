@@ -1,6 +1,7 @@
 ---
 title: My First Plunge Into The Abstract Algorithm
 date: "2019-03-27T22:12:03.284Z"
+description: I attempt to start reading "The Optimal Implementation of Functional Programming Languages"
 ---
 
 I just picked up [The Optimal Implementation of Functional Programming Languages](https://www.amazon.com/Implementation-Functional-Programming-Languages-Theoretical/dp/0521621127). Since I'm writing a functional programming language, currently nicknamed Zoda, this seemed like a natural buy. But this book is surprisingly difficult to read. For starters, here is the very beginning of the introduction:

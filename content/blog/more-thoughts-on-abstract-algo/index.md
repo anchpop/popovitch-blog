@@ -1,6 +1,7 @@
 ---
 title: Beginning Thoughts on The Abstract Algorithm
 date: "2019-03-28T22:12:03.284Z"
+descriptions: My initial takeaways from the portions of "The Optimal Implementation of Functional Programming Languages" that I have read
 ---
 
 Trigger warnings: Haskell knowledge required, oversimplifications of Haskell evaluation strategy within 
