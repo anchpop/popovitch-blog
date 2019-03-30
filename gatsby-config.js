@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `The Popovitch Blog`,
     author: `Andre Popovitch`,
-    description: `Just a place to but my incoherent ramblings.`,
+    description: `A blog for my thoughts.`,
     siteUrl: `https://popovit.ch/`,
     social: {
       twitter: `popovitchandre`,
