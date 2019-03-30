@@ -1,9 +1,10 @@
 ---
 title: Beginning Thoughts on The Abstract Algorithm
 date: "2019-03-28T22:12:03.284Z"
+description: The Abstract Algorithm is an attempt to avoid computing the same data multiple times.
 ---
 
-Trigger warnings: Haskell knowledge required, oversimplifications of Haskell evaluation strategy within 
+Warnings: Haskell knowledge required, oversimplifications of Haskell evaluation strategy within 
 
 The Abstract Algorithm is an attempt to avoid computing the same data multiple times. Imagine you have the following Haskell function:
 

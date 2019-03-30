@@ -3,7 +3,7 @@ title: Why Do We Need Another Programming Language
 date: "2019-03-28T23:46:37.121Z"
 ---
 
-The languages that we have available to us for writing games today are inadequate. I won't attempt to prove that here - I don't expect to change the mind of anyone who doesn't already agree with me. You want a few things in any language for writing games:
+The languages that we have available to us for writing games today are inadequate. You want a few things in any language for writing games:
 
 1) Beginner friendliness
 
