@@ -1,5 +1,5 @@
 {
-  "name": "The Popovitch Blog",
+  "name": "The-Popovitch-Blog",
   "private": true,
   "description": "A blog for all my thoughts, mostly relating to programming.",
   "version": "0.1.0",
@@ -48,7 +48,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/anchpop/popovitch-blog.git"
   },
   "scripts": {
     "build": "gatsby build",
