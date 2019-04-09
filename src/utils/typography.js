@@ -6,6 +6,12 @@ Wordpress2016.overrideThemeStyles = () => {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
+    "code": {
+      lineHeight: 1.5,
+    },
+    "pre": {
+      lineHeight: 0,
+    }
   }
 }
 
