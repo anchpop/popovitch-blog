@@ -1,6 +1,6 @@
 ---
-title: Explaining the Abstract Algorithm
-date: "2019-04-08T22:12:03.284Z"
+title: Explaining the Abstract Algorithm - Part 1
+date: "2019-09-08T22:12:03.284Z"
 descriptions: Explaining how the abstract algorithm actually works
 ---
 
@@ -334,52 +334,127 @@ looks like the `id` function is on the right side - this solves our first myster
                        x           y   3     
 ```
 
-We now finally know what `y` is, it's the `id` function. With this, we can start to reduce our virtual redex. Remember, this is how it originally looked:
+We now finally know what `y` is, it's the `id` function. With this, we can reduce our `to_reduce` function. Remember, `to_reduce` involved applying `part_1` to `part_2`. So the first step is to apply `part_1` to `part_2`.
 
 ```haskell
-           to_reduce
-               $
-             /   \  
-            /     \  
-           /       \  
-      part_1 x    part_2 y  
-        $            $        
-      /   \         / \      
-     /     \       /   \   
-    /      |       |    \              
-   x     id x   pair p   $   
-           |            / \  
+           to_reduce                         to_reduce       
+               $                                 $           
+             /   \                             /   \         
+            /     \                           /     \        
+           /       \                         /       \       
+      part_1 x    part_2 y                part_2 y     id x  
+        $            $           ->         $            |   
+      /   \         / \                   /   \          x   
+     /     \       /   \                 /     \             
+    /      |       |    \               /      |             
+   x     id x   pair p   $            pair     $             
+           |            / \                   / \            
+           x           y   3                 y   3           
+```
+
+In haskell, this would look like this:
+
+```haskell
+id x = x                      
+pair p = (p, p)               id x = x                             id x = x               
+part_1 x = x id           ->  pair p = (p, p)                  ->  pair p = (p, p)        
+part_2 y = pair (y 3)         part_2 y = pair (y 3)                part_2 y = pair (y 3)  
+to_reduce = part_1 part_2     to_reduce = (\x -> x id) part_2      to_reduce = part_2 id  
+                                -- replace part_1 with its           -- reduce
+                                -- definition. 
+```
+
+(I added the extra step of replacing `part_1` with its definition that we don't have to do when we visualize it as a tree)
+
+Then the next step is to reduce `part_2`!
+
+```haskell
+       to_reduce                     to_reduce  
+           $                             $      
+         /   \                         /   \    
+        /     \                       /     \   
+       /       \                     /       \  
+    part_2 y   id x               pair p      $ 
+      $          |         ->                / \
+    /   \        x                        id x  3
+   /     \                                  |      
+  /      |                                  x   
+pair     $                                      
+        / \                                     
+       y   3                                    
+
+id x = x                   
+pair p = (p, p)        ->  id x = x                               id x = x
+part_2 y = pair (y 3)      pair p = (p, p)                    ->  pair p = (p, p)
+to_reduce = part_2 id      to_reduce = (\y -> pair (y 3)) id      to_reduce = pair (id 3)
+                             -- replace part_2 with its
+                             -- definition. 
+```
+
+Then we just apply `id`!
+
+```haskell
+   to_reduce             to_reduce   
+       $                     $       
+     /   \                 /   \     
+    /     \      ->       /     \    
+   /       \             /       \   
+pair p      $         pair p      3  
+           / \                         
+        id x  3                      
+          |                          
+          x                          
+
+
+id x = x                     
+pair p = (p, p)          ->  pair p = (p, p)                   ->  pair p = (p, p)               
+to_reduce = pair (id 3)      to_reduce = pair ((\x -> x) 3)        to_reduce = pair 3
+                               -- replace id with its
+                               -- definition. 
+```
+
+We have reduced the "virtual redex"! `(y 3)` has been converted to its true self, `3`. But the interesting thing is that we've reduced the virtual redex in an *optimal number* of steps. Let's be more precice. Remember how we were moving around that *current position* arrow all around the graph earlier? Let's label all the edges that we visited on the tree.
+
+```haskell
+           to_reduce            
+               $                
+             /   \              
+           c/     \b            
+           /       \            
+      part_1 x    part_2 y      
+        $            $          
+      /   \         / \         
+    d/     \e      /   \        
+    /      |       |    \       
+   x     id x  pair p    $      
+           |           a/ \     
            x           y   3    
 ```
 
-Now,  reduce it a bit:
+We started at `(y 3)`, so our initial position is the `$` connected to the edge labelled `a`. You can think of a reduction as combining multiple edges.
 
 ```haskell
-                     to_reduce          
-                         $               
-                       /   \               
-                      /     \           
-                     /       \              
-                  part_2 x     id x
-                    $            |   
-                  /   \          x
-                 /     \      
-                /      |       
-              pair     $   
-                      / \           
-                     y   3           
+           to_reduce                         to_reduce                     to_reduce     
+               $                                 $                             $         
+             /   \                             /   \                         /   \       
+           c/     \b                       bcd/     \e                      /     \      
+           /       \                         /       \                     /       \     
+      part_1 x    part_2 y                part_2 y     id x             pair p      $    
+        $            $           ->         $            |       ->           abcde/ \   
+      /   \         / \                   /   \          x                      id x  3  
+    d/     \e      /   \                 /     \                                  |      
+    /      |       |    \               /      |                                  x      
+   x     id x   pair p   $            pair     $                                         
+           |           a/ \                  a/ \                                        
+           x           y   3                 y   3                                       
 ```
 
+First we reduce the application of `part_1` to `part_2`, which has the effect of combining the `b`, `c`, and `d` edges, which we'll call `bcd`. Then we reduce the application of `part_2` to `id`, which combines the `a`, `bcd`, and `e` edges. This is the absolute minimum we have to do to convert the virtual redex `(y 3)` to a the redex `(id 3)`.
 
-And finally!
+What we're really done here is described in a very high level way how to 1) find the shortest path between a mysterious element in a virtual redex and 2) use that path to optimally reduce a virtual redex. So, any reduction algorithm that is optimal must:
 
-```haskell
-                     to_reduce          
-                         $               
-                       /   \               
-                      /     \           
-                     /       \              
-                  pair p      $
-                             / \
-                            y  3 
-```
+    1) Compute the normal form of am expression without reducing any path corresponding to a virtual redex more than once.
+
+    2) Compute the normal form of am expression without reducing any uneccsary path.
+
+This concept of virtual redexes is very important for understanding the abstract algorithm. For more information, see part 2 once it comes out!
