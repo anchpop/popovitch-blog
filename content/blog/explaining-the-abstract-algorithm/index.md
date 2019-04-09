@@ -453,8 +453,8 @@ First we reduce the application of `part_1` to `part_2`, which has the effect of
 
 What we're really done here is described in a very high level way how to 1) find the shortest path between a mysterious element in a virtual redex and 2) use that path to optimally reduce a virtual redex. So, any reduction algorithm that is optimal must:
 
-    1) Compute the normal form of am expression without reducing any path corresponding to a virtual redex more than once.
+1) Compute the normal form of am expression without reducing any path corresponding to a virtual redex more than once.
 
-    2) Compute the normal form of am expression without reducing any uneccsary path.
+2) Compute the normal form of am expression without reducing any uneccsary path.
 
 This concept of virtual redexes is very important for understanding the abstract algorithm. For more information, see part 2 once it comes out!
