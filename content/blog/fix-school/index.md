@@ -6,7 +6,7 @@ description: Kids say that school is boring and useless, and they're right.
 
 Kids say that school is boring and useless, and they're right. School takes the innate curiosity all children have and hammers it until there's nothing left.
 
-Have you ever interacted with a young child? A common experience is incessantly asking "why". They do this [not because they just want to prolong a conversation, but because they actually want to know the answer](https://www.sciencedaily.com/releases/2009/11/091113083254.htm). Children are *incredibly* curious. Here's a paraphrasing of a conversation I overheard:
+Have you ever interacted with a young child? A common experience is incessantly asking "why". They do this [not because they just want to prolong a conversation, but because they actually want to know the answer](https://www.sciencedaily.com/releases/2009/11/091113083254.htm). And, if you had a child, and someone else was speaking to them, which conversation would you rather overhear?
 
 > Young child: Why does it thunder?
 >
@@ -14,7 +14,7 @@ Have you ever interacted with a young child? A common experience is incessantly 
 >
 > Child: Oh. 
 
-This could be called a "curiosity stopper". It's a little amusing for the adult, but the child gains nothing from it. Instead, here is how the conversation could have gone:
+Or
 
 > Young child: Why does it thunder?
 >
@@ -22,13 +22,13 @@ This could be called a "curiosity stopper". It's a little amusing for the adult,
 >
 > Child: Oh. 
 
-Most children don't really have the tools to understand an answer like that, but that doesn't matter. What's important is that you treated them with respect. What you absolutely need to do is *foster curiosity*. The child had a question, and this was treated as a good and useful thing by the adults, and an answer was available. Here's another example:
+I say the second. Most children don't really have the tools to understand an answer like that, but that doesn't matter. What's important is that you treated them with respect and *fostered curiosity*. The child had a question, and this was treated as a good and useful thing by the adults, and an answer was available. Here's another example:
 
 > Young child: Why is soap slippery?
 >
 > Adult: I'm not sure, do you want to look it up?
 
-This is even better because it's actually teaching the child that when they don't know something, there are tools they can use to learn more. If you try and look that up, you'll only find explanations that are way too complicated for most adults to understand (let alone children), but that doesn't matter. What you need to teach them is that curiosity is good and that there are ways for them to satisfy their curiosity. If you can [oversimplify a topic to make the concepts easier to understand at the cost of some accuracy](https://en.wikipedia.org/wiki/Lie-to-children), you should do that at every chance you get. For example, lightning is really caused by internal friction in the cloud, not multiple clouds rubbing together, but the "clouds rubbing together" idea is close enough.
+This is even better because it's actually teaching the child that when they don't know something, there are tools they can use to learn more. If you try and look that up, you'll only find explanations that are way too complicated for most adults to understand (let alone children), but that doesn't matter. What you need to teach them is that curiosity is good and that there are ways for them to satisfy their curiosity. If you can [oversimplify a topic to make the concepts easier to understand at the cost of some accuracy](https://en.wikipedia.org/wiki/Lie-to-children), you should. For example, lightning is really caused by internal friction in the cloud, not multiple clouds rubbing together, but the "clouds rubbing together" idea is close enough.
 
 ### The education system
 
