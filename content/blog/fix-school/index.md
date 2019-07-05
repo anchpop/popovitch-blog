@@ -1,5 +1,5 @@
 ---
-title: How To Fix the Public Education Systen
+title: How To Fix the Public Education System
 date: "2019-07-05T23:46:37.121Z"
 description: Kids say that school is boring and useless, and they're right.
 ---
