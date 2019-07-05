@@ -1,6 +1,6 @@
 ---
 title: Explaining the Abstract Algorithm - Part 1
-date: "2019-09-08T22:12:03.284Z"
+date: "2019-05-08T22:12:03.284Z"
 descriptions: Explaining how the abstract algorithm actually works
 ---
 
