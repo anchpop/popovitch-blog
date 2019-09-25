@@ -1,7 +1,7 @@
 ---
 title: Explaining the Abstract Algorithm - Part 1
 date: "2019-09-08T22:12:03.284Z"
-descriptions: Explaining how the abstract algorithm actually works
+descriptions: Explaining the concept of the "Virtual redex"
 ---
 
 Warnings: Haskell knowledge required.
@@ -297,7 +297,7 @@ current pos ⭢  part_1 x     part_2 y         ----------------------------
                        x           y   3    
 ```
 
-Finally! `x`, which represents `part_2`, is on the left side of a function appplication! Now let's look at what's on the right side.
+Finally! `x`, which represents `part_2`, is on the left side of a function application! Now let's look at what's on the right side.
 
 
 ```haskell
@@ -453,8 +453,8 @@ First we reduce the application of `part_1` to `part_2`, which has the effect of
 
 What we're really done here is described in a very high level way how to 1) find the shortest path between a mysterious element in a virtual redex and 2) use that path to optimally reduce a virtual redex. So, any reduction algorithm that is optimal must:
 
-1) Compute the normal form of am expression without reducing any path corresponding to a virtual redex more than once.
+1) Compute the normal form of an expression without reducing any path corresponding to a virtual redex more than once.
 
-2) Compute the normal form of am expression without reducing any uneccsary path.
+2) Compute the normal form of an expression without reducing any unnecessary path.
 
 This concept of virtual redexes is very important for understanding the abstract algorithm. For more information, see part 2 once it comes out!
