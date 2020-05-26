@@ -38,11 +38,11 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong>, a Michigan State student who wants to change the world.
+              Written by <strong>{author}</strong>. I'm a kid who wants to change the world. I guess we'll see.
               {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
+              {/*<a href={`https://twitter.com/${social.twitter}`}>
                 You should follow him on Twitter
-              </a>
+            </a>*/}
             </p>
           </div>
         )
