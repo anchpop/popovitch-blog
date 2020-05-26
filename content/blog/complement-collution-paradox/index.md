@@ -46,17 +46,17 @@ Fortunately, there is a way to fix this. Here's what someone has to do:
 
 2) Create a new license for libraries. Let's call it the SOS License. Anyone can use any SOS-licensed library for free in any product they make, as long as that product makes less than $1M/year in revenue. If a product makes more than that, 5% of the excess must be paid to the SOS foundation. Additionally, any improvements to the library shipped in any product must also be submitted as a pull-request to the original author. 
 
-  1) Once you're paying the 5%, you can use an unlimited amount of SOS libraries in that project at no additional cost. 
+    1) Once you're paying the 5%, you can use an unlimited amount of SOS libraries in that project at no additional cost. 
 
-  2) If you're a library author, you would be of course be free to dual-license your code under [AGPL](https://en.wikipedia.org/wiki/Affero_General_Public_License) and SOS. This should probably be the default actually (although I haven't thought that entirely through). 
+    2) If you're a library author, you would be of course be free to dual-license your code under [AGPL](https://en.wikipedia.org/wiki/Affero_General_Public_License) and SOS. This should probably be the default actually (although I haven't thought that entirely through). 
 
 3) The SOS foundation pays people who have licensed their libraries under the SOS license a "fair amount". Dhere is a lot of difficulty in calculating what exactly a fair amount is. You can't just use how popular a library is, because that ignores the difference in scope and effort to create something like OpenSSL and left-pad. You can't use popularity multiplied by lines of code, because that creates bad incentives to write more verbose code. I do have some ideas for how to do this, but they're outside the scope of this essay. Regardless it should be something transparent and predictable, and difficult to game.
 
-  1) The foundation should probably also pay to sponsor "infant projects", which are competitors to closed-source software for which there exists no good open-source competition. 
+    1) The foundation should probably also pay to sponsor "infant projects", which are competitors to closed-source software for which there exists no good open-source competition. 
 
-  2) It could also sponsor things that are less common in open-source, like translating docs, writing tutorials, or increasing test coverage. 
+    2) It could also sponsor things that are less common in open-source, like translating docs, writing tutorials, or increasing test coverage. 
 
-  3) The money should go to all the contributors of the project, but probably the majority would go towards the main maintainers over people who just submit small typo-fix PRs and the like.
+    3) The money should go to all the contributors of the project, but probably the majority would go towards the main maintainers over people who just submit small typo-fix PRs and the like.
 
 (This approach only works for software libraries. Something similar could maybe work for applications like Blender where small users play for free but big studios have to pay, I'm not sure.)
 
