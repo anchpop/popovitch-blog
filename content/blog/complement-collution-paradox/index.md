@@ -1,5 +1,5 @@
 ---
-title: Open-Source Is In Trouble - Let's Collude To Save IT 
+title: Open-Source Is In Trouble - Let's Collude To Save It
 date: "2020-05-25T23:46:37.121Z"
 description: When multiple businesses produce complement goods, they must collude or risk being outcompeted. This must happen in open-source.
 ---
