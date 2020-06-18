@@ -50,7 +50,7 @@ Fortunately, there is a way to fix this. Here's what someone has to do:
 
     2) If you're a library author, you would be of course be free to dual-license your code under [AGPL](https://en.wikipedia.org/wiki/Affero_General_Public_License) and SOS. This should probably be the default actually (although I haven't thought that entirely through). 
 
-3) The SOS foundation pays people who have licensed their libraries under the SOS license a "fair amount". Dhere is a lot of difficulty in calculating what exactly a fair amount is. You can't just use how popular a library is, because that ignores the difference in scope and effort to create something like OpenSSL and left-pad. You can't use popularity multiplied by lines of code, because that creates bad incentives to write more verbose code. I do have some ideas for how to do this, but they're outside the scope of this essay. Regardless it should be something transparent and predictable, and difficult to game.
+3) The SOS foundation pays people who have licensed their libraries under the SOS license a "fair amount". There is a lot of difficulty in calculating what exactly a fair amount is. You can't just use how popular a library is, because that ignores the difference in scope and effort to create something like OpenSSL and left-pad. You can't use popularity multiplied by lines of code, because that creates bad incentives to write more verbose code. I do have some ideas for how to do this, but they're outside the scope of this essay. Regardless it should be something transparent and predictable, and difficult to game.
 
     1) The foundation should probably also pay to sponsor "infant projects", which are competitors to closed-source software for which there exists no good open-source competition. 
 
